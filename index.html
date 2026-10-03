@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern To-Do List</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Productivity</p>
+        <h1>To-Do List</h1>
+      </div>
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+        🌙
+      </button>
+    </header>
+
+    <section class="task-form">
+      <input id="taskInput" type="text" placeholder="Tambah tugas baru..." />
+      <select id="taskCategory">
+        <option value="Pribadi">Pribadi</option>
+        <option value="Kerja">Kerja</option>
+        <option value="Belajar">Belajar</option>
+        <option value="Lainnya">Lainnya</option>
+      </select>
+      <button id="addTaskBtn">Tambah</button>
+    </section>
+
+    <section class="filters">
+      <button class="filter active" data-filter="all">Semua</button>
+      <button class="filter" data-filter="active">Aktif</button>
+      <button class="filter" data-filter="completed">Selesai</button>
+    </section>
+
+    <section class="summary">
+      <div class="summary-card">
+        <span>Total</span>
+        <strong id="totalCount">0</strong>
+      </div>
+      <div class="summary-card">
+        <span>Selesai</span>
+        <strong id="doneCount">0</strong>
+      </div>
+      <div class="summary-card">
+        <span>Aktif</span>
+        <strong id="activeCount">0</strong>
+      </div>
+    </section>
+
+    <ul id="taskList" class="task-list"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
